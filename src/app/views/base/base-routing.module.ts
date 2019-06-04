@@ -9,9 +9,10 @@ import { TabsComponent } from './tabs.component';
 import { CarouselsComponent } from './carousels.component';
 import { CollapsesComponent } from './collapses.component';
 import { PaginationsComponent } from './paginations.component';
-import {PopoversComponent} from './popovers.component';
-import {ProgressComponent} from './progress.component';
-import {TooltipsComponent} from './tooltips.component';
+import { PopoversComponent } from './popovers.component';
+import { ProgressComponent } from './progress.component';
+import { TooltipsComponent } from './tooltips.component';
+import { ListaDoWillComponent } from '../lista-do-will/lista-do-will.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,9 @@ const routes: Routes = [
       title: 'Base'
     },
     children: [
+      {
+        path: 'lista-do-will', component: ListaDoWillComponent
+      },
       {
         path: '',
         redirectTo: 'cards'
@@ -109,4 +113,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class BaseRoutingModule {}
+export class BaseRoutingModule { }
